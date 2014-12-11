@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to Ziv Hadad's website!</title>
+	<script type="text/javascript">
+	var count = 0;
+	function slideshow()
+	{
+		var slideimages = new Array(); 
+		slideimages[0] = "{% static 'polls/fish1.jpg' %}";
+		slideimages[1] = "{% static 'polls/fish2.jpg' %}";
+		slideimages[2] = "{% static 'polls/fish3.jpg' %}";
+		slideimages[3] = "{% static 'polls/fish4.jpg' %}";
+		slide.src = slideimages[count%4];
+		setTimeout("slideshow()",2000);
+		count++;
+	}
+	</script>
+</head>
+<iframe width="50" height="20" src="//www.youtube.com/embed/e98gfSs4OPM?autoplay=1" frameborder="0" allowfullscreen></iframe>
+<body id="background_picture">
+	<!-- HEADER -->
+	<div id="header">
+		<h1 id="hello_message">Welcome to Ziv's page!</h1>
+	</div>
+
+	<!-- CONTENT -->
+	<div id="content">
+		<p>This is <strong>PANDA'S</strong> page.</p>
+		<ol type="1" style="text-align:left; margin-left:8.5em; color:red">
+			<li>Attending MEET</li>
+			<li>Having pizza at MEET</li>
+			<li>See number 2</li>
+		</ol>
+<img src="https://farm3.staticflickr.com/2703/4383007425_09f2445734.jpg">
+		<img src="http://www.mrwallpaper.com/wallpapers/Fire-Fish.jpg" id="slide" width="720px" height="480px"/>
+		
+	</div>
+	<script type="text/javascript">
+		slideshow();
+	</script>
+	<!-- FOOTER -->
+	<div id="footer">
+		<h2>God bless the PANDA!</h2>
+
+	</div> 
+</body>
+</html>
